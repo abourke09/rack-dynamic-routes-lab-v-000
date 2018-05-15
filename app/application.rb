@@ -11,7 +11,9 @@ class Application
 
       if @@items.include?(item_name)
         resp.write "#{price}"
-
+      else
+        resp.write "Item not found"
+        resp.status = 400
       resp.write song.artist
     else
       resp.write "Route not found"
