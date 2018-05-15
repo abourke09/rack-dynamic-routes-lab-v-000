@@ -14,6 +14,7 @@ class Application
       else
         resp.write "Item not found"
         resp.status = 400
+      end
       resp.write song.artist
     else
       resp.write "Route not found"
