@@ -9,7 +9,7 @@ class Application
       item_name = req.path.split("/items/").last
       object = @@items.find {|x| x.name == item_name}
 
-      if @@items.include?(item_name)
+      if object
         price = object.price
         resp.write "#{price}"
       else
