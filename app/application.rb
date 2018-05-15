@@ -5,7 +5,6 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-    #if req.path=="/items"
       item_name = req.path.split("/items/").last
       object = @@items.find {|x| x[:name] == item_name}
       price = object[:price]
