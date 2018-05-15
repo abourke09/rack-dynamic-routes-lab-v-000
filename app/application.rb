@@ -8,6 +8,7 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
+      binding.pry
       object = @@items.find {|x| x[:name] == item_name}
       price = object[:price]
 
